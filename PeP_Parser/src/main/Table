@@ -1,0 +1,30 @@
+16-bit Thumb instruction encoding
+
+ ---------------------------------------
+| 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 |
+ ---------------------------------------
+
+
+ opcode: des bits no. 15 a 9 (sur 6 bits)
+         010000 -> Data processing #PRIORITE
+         0101xx, 011xxx, 100xxx -> Load/store single data item
+
+ Data processing:
+ <0000, Bitwise AND>
+ <0001, Exclusive OR>
+ <0010, Logical Shift Left>
+ <0011, Logical Shift Right>
+ <0100, Arithmetic Shift Right>
+ <0101, Add with Carry>
+ <0110, Subtract with Carry>
+ <0111, Rotate Right>
+ <1000, Set flags on bitwise AND>
+ <1001, Reverse Subtract from 0>
+ <1010, Compare Registers>
+ <1011, Compare Negative>
+ <1100, Logical OR>
+ <1101, Multiply Two Registers>
+ <1110, Bit Clear>
+ <1111, Bitwise NOT>
+
+
