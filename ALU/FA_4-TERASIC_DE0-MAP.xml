@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LogisimGoesFPGABoardMapInformation>
+<GlobalMapInformation BoardName="TERASIC_DE0" ToplevelCircuitName="FA_4"/>
+<MAPPEDCOMPONENT_1 Height="29" Key="BUS: /A#Pin0" LocationX="365" LocationY="363" Width="14"/>
+<MAPPEDCOMPONENT_2 Height="29" Key="BUS: /A#Pin1" LocationX="343" LocationY="363" Width="14"/>
+<MAPPEDCOMPONENT_3 Height="29" Key="BUS: /A#Pin2" LocationX="321" LocationY="363" Width="14"/>
+<MAPPEDCOMPONENT_4 Height="29" Key="BUS: /A#Pin3" LocationX="299" LocationY="363" Width="14"/>
+<MAPPEDCOMPONENT_5 Height="29" Key="BUS: /B#Pin0" LocationX="167" LocationY="363" Width="14"/>
+<MAPPEDCOMPONENT_6 Height="29" Key="BUS: /B#Pin1" LocationX="189" LocationY="363" Width="14"/>
+<MAPPEDCOMPONENT_7 Height="29" Key="BUS: /B#Pin2" LocationX="211" LocationY="363" Width="14"/>
+<MAPPEDCOMPONENT_8 Height="29" Key="BUS: /B#Pin3" LocationX="233" LocationY="363" Width="14"/>
+<MAPPEDCOMPONENT_9 Height="21" Key="BUS: /Sum#Pin0" LocationX="321" LocationY="331" Width="9"/>
+<MAPPEDCOMPONENT_a Height="21" Key="BUS: /Sum#Pin1" LocationX="341" LocationY="331" Width="9"/>
+<MAPPEDCOMPONENT_b Height="21" Key="BUS: /Sum#Pin2" LocationX="362" LocationY="331" Width="9"/>
+<MAPPEDCOMPONENT_c Height="21" Key="BUS: /Sum#Pin3" LocationX="382" LocationY="331" Width="9"/>
+<MAPPEDCOMPONENT_d Height="19" Key="PIN: /Cin#Button0" LocationX="396" LocationY="370" Width="18"/>
+<MAPPEDCOMPONENT_e Height="21" Key="PIN: /Cout#LED0" LocationX="301" LocationY="331" Width="9"/>
+</LogisimGoesFPGABoardMapInformation>
