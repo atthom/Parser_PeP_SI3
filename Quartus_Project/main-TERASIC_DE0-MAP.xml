@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LogisimGoesFPGABoardMapInformation>
+<GlobalMapInformation BoardName="TERASIC_DE0" ToplevelCircuitName="main"/>
+<MAPPEDCOMPONENT_1 Height="29" Key="PIN: /A#Button0" LocationX="167" LocationY="363" Width="14"/>
+<MAPPEDCOMPONENT_2 Height="29" Key="PIN: /B#Button0" LocationX="189" LocationY="363" Width="14"/>
+<MAPPEDCOMPONENT_3 Height="21" Key="PIN: /S#LED0" LocationX="301" LocationY="331" Width="9"/>
+</LogisimGoesFPGABoardMapInformation>

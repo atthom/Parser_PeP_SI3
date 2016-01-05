@@ -1,0 +1,1 @@
+RECOMPILER LOGISIM EVLUTION AVEC LE XML DE DE2  et faire les manip avec quartus

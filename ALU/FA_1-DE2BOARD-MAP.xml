@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LogisimGoesFPGABoardMapInformation>
+<GlobalMapInformation BoardName="DE2BOARD" ToplevelCircuitName="FA_1"/>
+<MAPPEDCOMPONENT_1 Height="28" Key="PIN: /A#Button0" LocationX="247" LocationY="22" Width="15"/>
+<MAPPEDCOMPONENT_2 Height="34" Key="PIN: /B#Button0" LocationX="291" LocationY="19" Width="20"/>
+<MAPPEDCOMPONENT_3 Height="23" Key="PIN: /Ci#Button0" LocationX="627" LocationY="18" Width="14"/>
+<MAPPEDCOMPONENT_4 Height="14" Key="PIN: /Co#LED0" LocationX="524" LocationY="82" Width="20"/>
+<MAPPEDCOMPONENT_5 Height="12" Key="PIN: /S#LED0" LocationX="116" LocationY="52" Width="21"/>
+</LogisimGoesFPGABoardMapInformation>
