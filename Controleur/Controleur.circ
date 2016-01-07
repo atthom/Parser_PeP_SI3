@@ -269,11 +269,11 @@ end TCL_Generic;
     <wire from="(250,160)" to="(280,160)"/>
     <wire from="(180,100)" to="(200,100)"/>
     <wire from="(180,130)" to="(200,130)"/>
+    <wire from="(180,160)" to="(200,160)"/>
     <wire from="(180,90)" to="(260,90)"/>
     <wire from="(280,100)" to="(290,100)"/>
     <wire from="(280,130)" to="(290,130)"/>
     <wire from="(180,60)" to="(190,60)"/>
-    <wire from="(180,160)" to="(190,160)"/>
     <wire from="(220,60)" to="(230,60)"/>
     <wire from="(260,60)" to="(270,60)"/>
     <wire from="(240,100)" to="(250,100)"/>
@@ -303,9 +303,6 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(200,100)" name="Tunnel">
       <a name="label" val="b3"/>
-    </comp>
-    <comp lib="0" loc="(190,160)" name="Tunnel">
-      <a name="label" val="b9"/>
     </comp>
     <comp lib="0" loc="(160,230)" name="Splitter">
       <a name="fanout" val="16"/>
@@ -339,6 +336,9 @@ end TCL_Generic;
       <a name="facing" val="west"/>
       <a name="fanout" val="6"/>
       <a name="incoming" val="6"/>
+    </comp>
+    <comp lib="0" loc="(200,160)" name="Tunnel">
+      <a name="label" val="b9"/>
     </comp>
   </circuit>
   <circuit name="DataProcessing">
