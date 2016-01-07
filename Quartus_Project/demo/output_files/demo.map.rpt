@@ -1,0 +1,730 @@
+Analysis & Synthesis report for demo
+Wed Jan 06 20:36:50 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Wed Jan 06 20:36:50 2016               ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; demo                                            ;
+; Top-level Entity Name              ; demo                                            ;
+; Family                             ; Cyclone IV GX                                   ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total GXB Receiver Channel PCS     ; N/A until Partition Merge                       ;
+; Total GXB Receiver Channel PMA     ; N/A until Partition Merge                       ;
+; Total GXB Transmitter Channel PCS  ; N/A until Partition Merge                       ;
+; Total GXB Transmitter Channel PMA  ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; demo               ; demo               ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Jan 06 20:36:47 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off demo -c demo
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/ula_simple_entity.vhd
+    Info (12023): Found entity 1: ULA_simple
+Info (12021): Found 1 design units, including 0 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/ula_simple_behavior.vhd
+    Info (12022): Found design unit 1: ULA_simple-PlatformIndependent
+Info (12021): Found 1 design units, including 1 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/fa_32_entity.vhd
+    Info (12023): Found entity 1: FA_32
+Info (12021): Found 1 design units, including 0 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/fa_32_behavior.vhd
+    Info (12022): Found design unit 1: FA_32-PlatformIndependent
+Info (12021): Found 1 design units, including 1 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/fa_16_entity.vhd
+    Info (12023): Found entity 1: FA_16
+Info (12021): Found 1 design units, including 0 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/fa_16_behavior.vhd
+    Info (12022): Found design unit 1: FA_16-PlatformIndependent
+Info (12021): Found 1 design units, including 1 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/fa_4_entity.vhd
+    Info (12023): Found entity 1: FA_4
+Info (12021): Found 1 design units, including 0 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/fa_4_behavior.vhd
+    Info (12022): Found design unit 1: FA_4-PlatformIndependent
+Info (12021): Found 1 design units, including 1 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/fa_1_entity.vhd
+    Info (12023): Found entity 1: FA_1
+Info (12021): Found 1 design units, including 0 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/fa_1_behavior.vhd
+    Info (12022): Found design unit 1: FA_1-PlatformIndependent
+Info (12021): Found 1 design units, including 1 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/demo_entity.vhd
+    Info (12023): Found entity 1: demo
+Info (12021): Found 1 design units, including 0 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/demo_behavior.vhd
+    Info (12022): Found design unit 1: demo-PlatformIndependent
+Info (12021): Found 1 design units, including 1 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/cmp_cmn_entity.vhd
+    Info (12023): Found entity 1: CMP_CMN
+Info (12021): Found 1 design units, including 0 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/cmp_cmn_behavior.vhd
+    Info (12022): Found design unit 1: CMP_CMN-PlatformIndependent
+Info (12021): Found 1 design units, including 1 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/adc_sbc_entity.vhd
+    Info (12023): Found entity 1: ADC_SBC
+Info (12021): Found 1 design units, including 0 entities, in source file c:/users/user/logisim_workspace/arm_v2/demo/vhdl/circuit/adc_sbc_behavior.vhd
+    Info (12022): Found design unit 1: ADC_SBC-PlatformIndependent
+Info (12127): Elaborating entity "demo" for the top level hierarchy
+Warning (10873): Using initial value X (don't care) for net "s_LOGISIM_BUS_1[31..8]" at demo_behavior.vhd(41)
+Warning (10873): Using initial value X (don't care) for net "s_LOGISIM_BUS_4[31..8]" at demo_behavior.vhd(44)
+Info (12128): Elaborating entity "ULA_simple" for hierarchy "ULA_simple:ULA_simple_1"
+Warning (10541): VHDL Signal Declaration warning at ULA_simple_behavior.vhd(175): used implicit default value for signal "s_LOGISIM_BUS_17" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at ULA_simple_behavior.vhd(178): object "s_LOGISIM_BUS_21" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at ULA_simple_behavior.vhd(184): used implicit default value for signal "s_LOGISIM_BUS_3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at ULA_simple_behavior.vhd(189): object "s_LOGISIM_BUS_37" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at ULA_simple_behavior.vhd(192): used implicit default value for signal "s_LOGISIM_BUS_8" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "ADC_SBC" for hierarchy "ULA_simple:ULA_simple_1|ADC_SBC:ADC_SBC_1"
+Info (12128): Elaborating entity "FA_32" for hierarchy "ULA_simple:ULA_simple_1|ADC_SBC:ADC_SBC_1|FA_32:FA_32_1"
+Info (12128): Elaborating entity "FA_16" for hierarchy "ULA_simple:ULA_simple_1|ADC_SBC:ADC_SBC_1|FA_32:FA_32_1|FA_16:FA_16_2"
+Info (12128): Elaborating entity "FA_4" for hierarchy "ULA_simple:ULA_simple_1|ADC_SBC:ADC_SBC_1|FA_32:FA_32_1|FA_16:FA_16_2|FA_4:FA_4_2"
+Info (12128): Elaborating entity "FA_1" for hierarchy "ULA_simple:ULA_simple_1|ADC_SBC:ADC_SBC_1|FA_32:FA_32_1|FA_16:FA_16_2|FA_4:FA_4_2|FA_1:FA_1_1"
+Info (12128): Elaborating entity "CMP_CMN" for hierarchy "ULA_simple:ULA_simple_1|CMP_CMN:CMP_CMN_2"
+Error (12006): Node instance "GATE_1" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/demo_behavior.vhd Line: 99
+Error (12006): Node instance "MUX_1" instantiates undefined entity "Multiplexer_4" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 245
+Error (12006): Node instance "GATE_1" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 254
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 260
+Error (12006): Node instance "GATE_3" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 266
+Error (12006): Node instance "GATE_4" instantiates undefined entity "NOT_GATE_BUS" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 272
+Error (12006): Node instance "Shifter_1" instantiates undefined entity "Shifter_32_bit" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 277
+Error (12006): Node instance "GATE_5" instantiates undefined entity "NOT_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 283
+Error (12006): Node instance "Shifter_2" instantiates undefined entity "Shifter_32_bit" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 287
+Error (12006): Node instance "GATE_6" instantiates undefined entity "OR_GATE_BUS" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 293
+Error (12006): Node instance "Shifter_3" instantiates undefined entity "Shifter_32_bit" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 300
+Error (12006): Node instance "GATE_7" instantiates undefined entity "XOR_GATE_BUS_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 306
+Error (12006): Node instance "GATE_8" instantiates undefined entity "NOT_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 313
+Error (12006): Node instance "GATE_9" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 317
+Error (12006): Node instance "GATE_10" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 323
+Error (12006): Node instance "MUX_2" instantiates undefined entity "Multiplexer_bus_16" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 329
+Error (12006): Node instance "GATE_11" instantiates undefined entity "AND_GATE_BUS" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 351
+Error (12006): Node instance "Shifter_4" instantiates undefined entity "Shifter_32_bit" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 358
+Error (12006): Node instance "GATE_12" instantiates undefined entity "NOT_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 364
+Error (12006): Node instance "MULT_1" instantiates undefined entity "Multiplier" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 368
+Error (12006): Node instance "GATE_13" instantiates undefined entity "NOT_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 377
+Error (12006): Node instance "GATE_14" instantiates undefined entity "AND_GATE_BUS" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 381
+Error (12006): Node instance "GATE_15" instantiates undefined entity "OR_GATE_31_INPUTS" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ULA_simple_behavior.vhd Line: 388
+Error (12006): Node instance "MUX_1" instantiates undefined entity "Multiplexer_2" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ADC_SBC_behavior.vhd Line: 85
+Error (12006): Node instance "MUX_2" instantiates undefined entity "Multiplexer_bus_2" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ADC_SBC_behavior.vhd Line: 92
+Error (12006): Node instance "GATE_1" instantiates undefined entity "NOT_GATE_BUS" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ADC_SBC_behavior.vhd Line: 100
+Error (12006): Node instance "GATE_2" instantiates undefined entity "NOT_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/ADC_SBC_behavior.vhd Line: 105
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "NOT_GATE_BUS" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/CMP_CMN_behavior.vhd Line: 68
+Error (12006): Node instance "MUX_1" instantiates undefined entity "Multiplexer_bus_2" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/CMP_CMN_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "NOT_GATE_BUS" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/CMP_CMN_behavior.vhd Line: 68
+Error (12006): Node instance "MUX_1" instantiates undefined entity "Multiplexer_bus_2" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/CMP_CMN_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error (12006): Node instance "GATE_1" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 67
+Error (12006): Node instance "GATE_2" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 73
+Error (12006): Node instance "GATE_3" instantiates undefined entity "XOR_GATE_ONEHOT" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 79
+Error (12006): Node instance "GATE_4" instantiates undefined entity "OR_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 85
+Error (12006): Node instance "GATE_5" instantiates undefined entity "AND_GATE" File: C:/Users/user/logisim_workspace/ARM_V2/demo/vhdl/circuit/FA_1_behavior.vhd Line: 91
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 511 errors, 8 warnings
+    Error: Peak virtual memory: 525 megabytes
+    Error: Processing ended: Wed Jan 06 20:36:51 2016
+    Error: Elapsed time: 00:00:04
+    Error: Total CPU time (on all processors): 00:00:03
+
+
