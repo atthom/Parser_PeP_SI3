@@ -204,25 +204,6 @@ end TCL_Generic;
     <comp lib="0" loc="(1050,130)" name="Pin">
       <a name="label" val="FLAG"/>
     </comp>
-    <comp lib="0" loc="(780,100)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="16"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="1"/>
-      <a name="bit5" val="1"/>
-      <a name="bit6" val="1"/>
-      <a name="bit7" val="1"/>
-      <a name="bit8" val="2"/>
-      <a name="bit9" val="2"/>
-      <a name="bit10" val="2"/>
-      <a name="bit11" val="2"/>
-      <a name="bit12" val="3"/>
-      <a name="bit13" val="3"/>
-      <a name="bit14" val="3"/>
-      <a name="bit15" val="3"/>
-    </comp>
     <comp lib="0" loc="(1020,170)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -374,6 +355,8 @@ end TCL_Generic;
     <wire from="(180,180)" to="(300,180)"/>
     <wire from="(180,160)" to="(300,160)"/>
     <wire from="(180,220)" to="(230,220)"/>
+    <wire from="(550,280)" to="(610,280)"/>
+    <wire from="(490,210)" to="(490,220)"/>
     <wire from="(110,330)" to="(160,330)"/>
     <wire from="(460,180)" to="(460,200)"/>
     <wire from="(510,210)" to="(510,230)"/>
@@ -386,6 +369,7 @@ end TCL_Generic;
     <wire from="(460,120)" to="(460,150)"/>
     <wire from="(180,230)" to="(220,230)"/>
     <wire from="(110,470)" to="(110,500)"/>
+    <wire from="(490,220)" to="(580,220)"/>
     <wire from="(320,150)" to="(410,150)"/>
     <wire from="(230,220)" to="(320,220)"/>
     <wire from="(180,280)" to="(330,280)"/>
@@ -403,6 +387,7 @@ end TCL_Generic;
     <wire from="(170,340)" to="(170,350)"/>
     <wire from="(250,340)" to="(250,350)"/>
     <wire from="(180,170)" to="(300,170)"/>
+    <wire from="(410,50)" to="(590,50)"/>
     <wire from="(200,250)" to="(320,250)"/>
     <wire from="(90,460)" to="(90,470)"/>
     <wire from="(530,110)" to="(590,110)"/>
@@ -420,20 +405,29 @@ end TCL_Generic;
     <wire from="(90,460)" to="(120,460)"/>
     <wire from="(470,180)" to="(500,180)"/>
     <wire from="(520,170)" to="(550,170)"/>
-    <wire from="(340,210)" to="(370,210)"/>
     <wire from="(180,270)" to="(330,270)"/>
     <wire from="(180,290)" to="(330,290)"/>
     <wire from="(180,310)" to="(330,310)"/>
-    <wire from="(350,250)" to="(370,250)"/>
     <wire from="(440,180)" to="(460,180)"/>
+    <wire from="(350,250)" to="(560,250)"/>
     <wire from="(70,470)" to="(90,470)"/>
     <wire from="(180,560)" to="(200,560)"/>
+    <wire from="(340,210)" to="(490,210)"/>
     <wire from="(460,150)" to="(470,150)"/>
     <wire from="(520,150)" to="(530,150)"/>
-    <wire from="(410,50)" to="(550,50)"/>
     <wire from="(180,240)" to="(320,240)"/>
     <wire from="(180,190)" to="(310,190)"/>
     <wire from="(180,210)" to="(310,210)"/>
+    <comp lib="0" loc="(580,220)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="ULACode"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(550,280)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
     <comp lib="0" loc="(110,330)" name="Pin">
       <a name="width" val="16"/>
       <a name="label" val="PC"/>
@@ -441,6 +435,13 @@ end TCL_Generic;
     <comp lib="0" loc="(70,440)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="b9"/>
+    </comp>
+    <comp lib="0" loc="(590,50)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+      <a name="label" val="Rd"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(330,180)" name="Splitter">
       <a name="facing" val="west"/>
@@ -468,13 +469,6 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(440,350)" name="Tunnel">
       <a name="label" val="Exception"/>
-    </comp>
-    <comp lib="0" loc="(550,50)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="3"/>
-      <a name="label" val="Rd"/>
-      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(590,190)" name="Pin">
       <a name="facing" val="west"/>
@@ -506,6 +500,13 @@ end TCL_Generic;
       <a name="facing" val="east"/>
       <a name="label" val="b7"/>
     </comp>
+    <comp lib="0" loc="(560,250)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="6"/>
+      <a name="label" val="OpcodeData"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="2" loc="(530,190)" name="Multiplexer">
       <a name="width" val="3"/>
       <a name="enable" val="false"/>
@@ -517,13 +518,6 @@ end TCL_Generic;
     <comp lib="0" loc="(70,500)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="b6"/>
-    </comp>
-    <comp lib="0" loc="(370,250)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="6"/>
-      <a name="label" val="OpcodeData"/>
-      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(350,250)" name="Splitter">
       <a name="facing" val="west"/>
@@ -540,18 +534,17 @@ end TCL_Generic;
       <a name="width" val="3"/>
       <a name="label" val="Change"/>
     </comp>
-    <comp lib="0" loc="(370,210)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-      <a name="label" val="ULACode"/>
-      <a name="labelloc" val="east"/>
-    </comp>
     <comp lib="0" loc="(590,110)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="3"/>
       <a name="label" val="Rm"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(610,280)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="LoadStore"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(200,560)" name="Tunnel">
