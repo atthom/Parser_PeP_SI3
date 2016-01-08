@@ -1,0 +1,15 @@
+ffo 1
+zb 2
+bc 3
+addi 4
+andi 5
+ori 6
+jal 7
+j 8
+jr 9
+beq 10
+bne 11
+sw 12
+lui 13
+lw 14
+disp 15
