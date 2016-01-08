@@ -68,20 +68,20 @@ end type_architecture;&#13;
   </lib>
   <lib desc="#TCL" name="7">
     <tool name="TclGeneric">
-      <a name="content">library ieee;
-use ieee.std_logic_1164.all;
-
-entity TCL_Generic is
-  port(
-    --Insert input ports below
-    horloge_i  : in  std_logic;                    -- input bit example
-    val_i      : in  std_logic_vector(3 downto 0); -- input vector example
-
-	  --Insert output ports below
-    max_o      : out std_logic;                    -- output bit example
-    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example
-  );
-end TCL_Generic;
+      <a name="content">library ieee;&#13;
+use ieee.std_logic_1164.all;&#13;
+&#13;
+entity TCL_Generic is&#13;
+  port(&#13;
+    --Insert input ports below&#13;
+    horloge_i  : in  std_logic;                    -- input bit example&#13;
+    val_i      : in  std_logic_vector(3 downto 0); -- input vector example&#13;
+&#13;
+	  --Insert output ports below&#13;
+    max_o      : out std_logic;                    -- output bit example&#13;
+    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example&#13;
+  );&#13;
+end TCL_Generic;&#13;
 </a>
     </tool>
   </lib>
@@ -95,11 +95,7 @@ end TCL_Generic;
   </lib>
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="file#ARM_V2.circ" name="10"/>
-  <lib desc="file#BancRegistres.circ" name="11">
-    <tool name="BR32">
-      <a name="facing" val="south"/>
-    </tool>
-  </lib>
+  <lib desc="file#BancRegistres.circ" name="11"/>
   <lib desc="file#Controleur.circ" name="12"/>
   <main name="main"/>
   <options>
@@ -140,7 +136,40 @@ end TCL_Generic;
     <a name="clabelfont" val="SansSerif plain 12"/>
     <a name="circuitvhdl" val="false"/>
     <a name="circuitvhdlpath" val=""/>
-    <comp lib="11" loc="(610,160)" name="RM"/>
-    <comp lib="12" loc="(260,80)" name="DataProcessing"/>
+    <wire from="(310,310)" to="(500,310)"/>
+    <wire from="(110,180)" to="(150,180)"/>
+    <wire from="(460,230)" to="(500,230)"/>
+    <wire from="(740,260)" to="(740,300)"/>
+    <wire from="(310,200)" to="(310,310)"/>
+    <wire from="(480,210)" to="(500,210)"/>
+    <wire from="(600,240)" to="(800,240)"/>
+    <wire from="(740,300)" to="(820,300)"/>
+    <wire from="(390,250)" to="(500,250)"/>
+    <wire from="(400,270)" to="(500,270)"/>
+    <wire from="(150,70)" to="(150,180)"/>
+    <wire from="(120,260)" to="(140,260)"/>
+    <wire from="(230,200)" to="(310,200)"/>
+    <wire from="(420,290)" to="(500,290)"/>
+    <wire from="(430,330)" to="(500,330)"/>
+    <wire from="(600,260)" to="(740,260)"/>
+    <comp lib="0" loc="(150,70)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="Instruction"/>
+    </comp>
+    <comp lib="0" loc="(820,300)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="2"/>
+      <a name="label" val="Flags"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(800,240)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="S"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="11" loc="(600,240)" name="RM"/>
   </circuit>
 </project>
