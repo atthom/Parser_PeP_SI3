@@ -1,0 +1,16 @@
+and 0
+eor 1
+lsl 2
+lsr 3
+asr 4
+adc 5
+sbc 6
+ror 7
+tst 8
+rsb 9
+cmp 10
+cmn 11
+orr 12
+mul 13
+bic 14
+mvn 15
